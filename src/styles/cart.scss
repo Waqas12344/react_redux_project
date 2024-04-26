@@ -1,0 +1,109 @@
+@import "colors";
+
+.cart {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+
+  > main {
+    padding: 2rem;
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    > h1 {
+      color: $tertiary;
+      font: 100 2rem "Roboto";
+    }
+  }
+
+  > aside {
+    border-radius: 30px 0 0 30px;
+    background-color: $primary;
+    color: $tertiary;
+    height: 100%;
+    width: 100%;
+    box-shadow: -10px 0px 10px rgba(0, 0, 0, 0.182);
+    display: flex;
+    // justify-content: center;
+    text-align: left;
+    flex-direction: column;
+    padding: 30px;
+    > h2 {
+      margin: 1rem;
+      font: 500 1rem "Roboto";
+      letter-spacing: 1px;
+
+      &:last-of-type {
+        font-weight: 600;
+      }
+    }
+    >input{
+    
+      margin-right:80%;
+    }
+    >button{
+      width: 70%;
+      margin:10px auto;
+      height: 50px;
+      background-color: $secondary;
+      border-radius: 10px;
+      &:hover{
+        background-color: $secondarydark;
+      }
+    }
+  }
+}
+
+.cartItem {
+  background-color: $secondary;
+  width: 100%;
+  border-radius: 10px;
+  margin: 2rem 0;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr 1fr;
+  align-items: center;
+  img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+  }
+  > div {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    button {
+      width: 30px;
+      height: 30px;
+      border: none;
+      background-color: $primary;
+      color: $tertiary;
+      border-radius: 5px;
+      cursor: pointer;
+      &:hover {
+        background-color: $primarydark;
+        color:$primary ;
+      }
+    }
+
+    p {
+      width: 30px;
+      height: 30px;
+      display: grid;
+      place-items: center;
+    }
+  }
+
+  > svg {
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: inline-block;
+    margin: auto;
+
+    &:hover {
+      color: $primary;
+      
+    }
+  }
+}
